@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <title>Sachi's Bakeshop</title>
+</head>
+
+<header class="header">
+    <div class="logo">Sachi's</div>
+    <nav>
+        <a href="#account">Account</a>
+        <a href="#search">Search</a>
+      </nav>
+    <div class="#cart" onclick="toggleCart()"> 
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        (<span id="cart-count">0</span>)
+    </div>
+</header>
+
+<body>
+<div class="first-section">
+    <div class="intro-image">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/473612737_1338312250398934_2874793656476138996_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=paUfXJ43kxQQ7kNvgH0OoXp&_nc_oc=AdgWkvWoTEqMqYbHdkWDwkYMati0uhFcU7sYcsSH4frCtrDGdBlp6XtrvKyiDunj5gU&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1gE_FkQn-wBcXG7ADbLEUW_1OB73eI_QJyT8GEC9BbT-tg&oe=67B76159">
+    </div>
+</div>
+
+<div class="second-section">
+    <div class="second-section-text">
+        <h2 class="second-section-text-header">Menu</h2>
+    </div>
+
+
+    <div class="product" data-name="Chocolate Chip Cookies" data-price="20">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/473765853_2812009302314194_2801787059376557235_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=m1FESSthxeEQ7kNvgFO16Fq&_nc_oc=AdhDgx-_PnZn_4YgjvNFz7yM65rx3kEWczszrtaXCHQxQO2HxvpmPu_g8uGfl392Q3Q&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&oh=03_Q7cD1gEtbe9ktpMmYinLP7biYOyAOOMkAz-ZpDwVQAyqA0kDQQ&oe=67B7578A" alt="Chocolate Chip Cookies">
+        <h3>Chocolate Chip Cookies</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Rocky Road Cookies" data-price="5">
+        <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t1.15752-9/474076704_622884566882544_7949182268988666295_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rcFk3-V84YsQ7kNvgHLpwhv&_nc_oc=AdhVaHF1EnCEOekqd_45cld0n44gSq1oDaqKduw3Gg0aX5X4nmf8SZq3wFAf9xuwIbw&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&oh=03_Q7cD1gHV1ZOqDczpSL81y9Gv3hLxlh8MNaZ1wkDmw5ha71Tuvw&oe=67B79CE0" alt="Rocky Road Cookies">
+        <h3>Rocky Road Cookies</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Revel Bars" data-price="3">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/473776124_948568584048278_2335339298135958889_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=2vuxSylos2kQ7kNvgGZjW_C&_nc_oc=AdifrfyyytvqCFxVaOdYSGqOZ9IeGBAQUVSFkX-VAHShuc0E67g_AmxwT_YoZKCSI20&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1gHIU7Pwc4uahBUiyMSe79zoMaCSYyY-0bfDEi8aEduoDw&oe=67B783CE" alt="Revel Bars">
+        <h3>Revel Bars</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+   
+    <div class="product" data-name="Cheddar Cheesebars" data-price="20">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/473414720_1704508310104719_3010799883722289890_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=DrwVme7Eb9cQ7kNvgGQQKmL&_nc_oc=AdjitrE4WtmNp21h9wCB4wpIG_-hl8YeJB7kpGNZ_K0tR1tK1dvFFJdW00_PrwHArww&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&oh=03_Q7cD1gE8zUsd-_Ejmrr2TCR3tgrDe163UZtsSGcHKRxBGxFRjg&oe=67B77F07" alt="Cheddar Cheesebars">
+        <h3>Cheddar Cheesebars</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Choco Caramel Cake" data-price="5">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/473779056_480453998154752_2221435487640381490_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=zAZOx3cwmMUQ7kNvgEXF9kg&_nc_oc=AdjAbLx_N-IlQxTx8DOqRKt5PdLWUV_kfkaxm268tcUvzj1AK9GN_4jHBsLPowAv3E4&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1gFDkJnqVR0jZvKcvnmT5a_13A8Z3JL26U8gg0pBfTJ02Q&oe=67B795BD" alt="Choco Caramel Cake">
+        <h3>Choco Caramel Cake</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Brownies " data-price="3">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/474508642_1105088398010203_6717094568878180414_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VnZKGBmk6f0Q7kNvgG_7fcP&_nc_oc=Adg3oLkgdGV0CQeeDEt8AH4F7n1oUPzuMXkSDhq967lXB4nUpqzyqzP7C6YvT4CEnrA&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&oh=03_Q7cD1gHHwxHL6bmfKMSXwJVGmsOLv5PpMLDqiRjKcA9gYEJGaw&oe=67B7A0CE" alt="Brownies">
+        <h3>Brownies</h3>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+</div>
+
+<div class="third-section">
+    <div class="row">
+            <div class="column newsletter">
+                <h3>Sign up for the newsletter</h3>
+                <p>Want to be the first to read our news? Subscribe to the newsletter to keep abreast of all events.</p>
+                <input type="email" placeholder="Enter a valid email address">
+                <button>SUBMIT</button>
+            </div>
+            <div class="column">
+                <h3>Hours & Location</h3>
+                <p>14 E 12th St,<br>
+                   New York, NY 10007<br>
+                   (123) 456-2253</p>
+                <p>Monday - Sunday<br>
+                   7:00am - 8:00pm</p>
+            </div>
+    </div>
+    
+    <div class="social-icons">
+            <a href="#"><i>F</i></a> /*Facebook Link*/
+            <a href="#"><i>T</i></a> /*Twitter Link*/
+            <a href="#"><i>I</i></a> /*Instagram Link*/
+    </div>
+
+</div>
+
+<div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button class="close-btn" onclick="toggleCart()">Close</button>
+    <button class="checkout-btn" onclick="toggleCart()">Checkout</button>
+  </div>
+
+  <script>
+    const cart = [];
+    const cartCountElement = document.getElementById('cart-count');
+    const cartItemsElement = document.getElementById('cart-items');
+    const cartModal = document.getElementById('cart-modal');
+
+    function addToCart(button) {
+      const productElement = button.closest('.product');
+      const name = productElement.dataset.name;
+      const price = parseFloat(productElement.dataset.price);
+
+      // Add product to cart
+      cart.push({ name, price });
+
+      // Update cart count
+      cartCountElement.textContent = cart.length;
+
+      // Update cart items
+      updateCartItems();
+    }
+
+    function updateCartItems() {
+      cartItemsElement.innerHTML = '';
+      cart.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        cartItemsElement.appendChild(li);
+      });
+    }
+
+    function toggleCart() {
+      cartModal.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
